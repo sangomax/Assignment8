@@ -49,13 +49,13 @@ class MainViewController: UICollectionViewController, HeaderFilterDelegate {
             self.navigationItem.title = "My Restaurant"
         }
         
-        let header = collectionView.supplementaryView(forElementKind: UICollectionView.elementKindSectionHeader, at: .init(item: 0, section: 0)) as! Header
+        if let header = collectionView.supplementaryView(forElementKind: UICollectionView.elementKindSectionHeader, at: .init(row: 0, section: 0)) as? Header {
         
-        filteredItems = Restaurant.items
-        optionsMenuSelected = []
-        header.menuFilter.reloadData()
-        collectionView.reloadData()
-        
+            filteredItems = Restaurant.items
+            optionsMenuSelected = []
+            header.menuFilter.reloadData()
+            collectionView.reloadData()
+        }
     }
     
     private func generateLayout() -> UICollectionViewLayout {
