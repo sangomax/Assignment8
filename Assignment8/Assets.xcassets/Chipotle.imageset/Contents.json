@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "chipotle.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
